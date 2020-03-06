@@ -1,0 +1,20 @@
+aido:
+  swagger:
+    enabled: true
+    title: 模型在线服务
+    description: 模型在线服务文档
+    version: 1.0
+    base-package: com.baixin.bigdata.ddp.aido.business.controller
+  datasource:
+    basePackages: com.baixin.bigdata.ddp.aido.business.mapper
+    mapperLocations: classpath*:META-INF/mapper/*.xml
+  model:
+    storage:
+      # 模型文件存储得根路径。
+      # 模型文件分片后存储的路径：rootPath/md5/file.pmml
+      # 模型文件源文件目录：     rootPath/md5/sources/
+      # 模型文件上传进度：       rootPath/md5/file.process
+      rootPath: /data/aido/model/
+      #1*1024*1024=1 048 576
+      #每片大小5M=5 242 880
+      chunkSize: 5242880

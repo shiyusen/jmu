@@ -1,0 +1,20 @@
+
+logging:
+  level:
+    root: INFO
+
+spring:
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+  messages:
+    encoding: UTF-8
+
+
+server:
+  tomcat:
+    uri-encoding: UTF-8
+
+
