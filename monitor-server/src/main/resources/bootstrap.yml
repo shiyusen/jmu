@@ -1,5 +1,5 @@
 server:
-  port: 8268
+  port: 8368
   contextPath: /
   # Tomcat specifics
   tomcat:
@@ -15,8 +15,8 @@ server:
 
 spring:
   application:
-    name: aido
+    name: jmu
   profiles:
-    active: jdbc,common,business
+    active: common,jdbc
   aop:
     auto: true
