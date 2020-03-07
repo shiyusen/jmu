@@ -1,5 +1,6 @@
 package io.github.shiyusen.jmu.annotation;
 
+import io.github.shiyusen.jmu.business.hook.JmuAlarmHook;
 import io.github.shiyusen.jmu.business.hook.impl.JmuAlarmHookService;
 import io.github.shiyusen.jmu.business.model.OperationLogPo;
 import io.github.shiyusen.jmu.business.service.OperationLoggerService;
@@ -19,6 +20,7 @@ import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 import java.util.Date;
+import java.util.ServiceLoader;
 
 /**
  * method接口日志切面
@@ -46,7 +48,6 @@ public class OperationLogFilterHandler {
     public void operationable() {
     }
 
-
     @Around("operationable()")
     public Object aroundOperationable(ProceedingJoinPoint joinPoint) throws Exception {
 
@@ -67,7 +68,11 @@ public class OperationLogFilterHandler {
             throw new RuntimeException(throwable);
         } finally {
             log.info("invoke method={},request={},response={}", methodName, args, result);
-            operationLoggerService.insertOperationLogInfo(getOperationLogPo(args, result, level));
+            try {
+                operationLoggerService.insertOperationLogInfo(getOperationLogPo(args, result, level));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         return result;
     }

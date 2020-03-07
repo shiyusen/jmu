@@ -14,7 +14,12 @@ import java.util.ServiceLoader;
 @Service
 public class JmuAlarmHookService implements JmuAlarmHook {
 
-    private ServiceLoader<JmuAlarmHook> jmuAlarmHookServiceLoader = ServiceLoader.load(JmuAlarmHook.class);
+    private ServiceLoader<JmuAlarmHook> jmuAlarmHookServiceLoader;
+
+    public JmuAlarmHookService() {
+        this.jmuAlarmHookServiceLoader = ServiceLoader.load(JmuAlarmHook.class);
+        System.out.println(jmuAlarmHookServiceLoader);
+    }
 
     @Override
     public void alarm(Object input, Object output) {

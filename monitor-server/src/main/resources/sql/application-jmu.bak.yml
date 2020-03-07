@@ -1,7 +1,7 @@
 jmu:
   log:
     #配置告警的级别
-    alarm: INFO,WARN,ERROR
+    alarm: INFO,WARN,ERROR,jmu
   datasource:
     type: com.alibaba.druid.pool.DruidDataSourceC3P0Adapter
     driver-class-name: com.mysql.jdbc.Driver

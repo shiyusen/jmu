@@ -24,9 +24,9 @@
         delete from jum_operation_log
         where created <![CDATA[ <= ]]> #{created}
     </delete>
-    <insert id="insertOperationLogInfo" parameterType="io.github.shiyusen.jmu.business.model.OperationLogPo">
+    <insert id="insertOperationLogInfo" parameterType="io.github.shiyusen.jmu.business.model.OperationLogPo"  useGeneratedKeys="true" keyColumn="id" keyProperty="id">
         insert into jum_operation_log (name, ip, username, level, input, output, created)
-        values (#{name}, #{ip}, #{username}, #{level}, #{input}, #{output}, #{created})
+        values (#{name}, #{ip}, #{userName}, #{level}, #{input}, #{output}, #{created})
     </insert>
     <select id="getOperationLogInfo" resultMap="BaseResultMap" parameterType="io.github.shiyusen.jmu.business.model.OperationLogPo">
         select *
