@@ -20,8 +20,13 @@ public class LocalHostUtil {
      * @return
      * @throws UnknownHostException
      */
-    public static String getHostName() throws UnknownHostException {
-        return InetAddress.getLocalHost().getHostName();
+    public static String getHostName()  {
+        try {
+            return InetAddress.getLocalHost().getHostName();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        return "localhost";
     }
 
     /**
@@ -30,8 +35,13 @@ public class LocalHostUtil {
      * @return
      * @throws UnknownHostException
      */
-    public static String getLocalIP() throws UnknownHostException {
-        return InetAddress.getLocalHost().getHostAddress();
+    public static String getLocalIP()  {
+        try {
+            return InetAddress.getLocalHost().getHostAddress();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        return "127.0.0.1";
     }
 
     /**
@@ -80,7 +90,6 @@ public class LocalHostUtil {
             System.out.println("主机名称:" + LocalHostUtil.getHostName());
             System.out.println("系统首选IP:" + LocalHostUtil.getLocalIP());
             System.out.println("系统所有IP:" + String.join(",", LocalHostUtil.getLocalIPs()));
-        } catch (UnknownHostException e) {
         } catch (Exception e) {
             e.printStackTrace();
         }

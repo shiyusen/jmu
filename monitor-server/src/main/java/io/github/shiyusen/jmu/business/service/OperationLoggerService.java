@@ -9,9 +9,7 @@ import java.util.List;
  * @author 石玉森
  * @create 2020-03-07 18:03
  **/
-
-
-public interface OperationLogService {
+public interface OperationLoggerService {
     public ResponseEntity deleteOperationLogInfoById(OperationLogPo operationLogPo);
 
     public ResponseEntity deleteOperationLogInfoByCreated(OperationLogPo operationLogPo);

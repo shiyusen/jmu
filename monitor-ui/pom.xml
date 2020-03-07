@@ -12,8 +12,4 @@
     <groupId>io.github.shiyusen.jmu</groupId>
     <artifactId>monitor-ui</artifactId>
     <version>1.0.0</version>
-
-    <dependencies>
-
-    </dependencies>
 </project>

@@ -2,6 +2,8 @@ package io.github.shiyusen.jmu.business.service.impl;
 
 import io.github.shiyusen.jmu.business.mapper.OperationLogMapper;
 import io.github.shiyusen.jmu.business.model.OperationLogPo;
+import io.github.shiyusen.jmu.business.service.OperationLoggerService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -12,8 +14,9 @@ import java.util.List;
  * @author 石玉森
  * @create 2020-03-07 18:05
  **/
+@Slf4j
 @Service
-public class OperationLogServiceImpl implements OperationLogService {
+public class OperationLoggerServiceImpl implements OperationLoggerService {
 
     @Autowired
     private OperationLogMapper operationLogMapper;
@@ -32,7 +35,11 @@ public class OperationLogServiceImpl implements OperationLogService {
 
     @Override
     public ResponseEntity insertOperationLogInfo(OperationLogPo operationLogPo) {
-        operationLogMapper.insertOperationLogInfo(operationLogPo);
+        try {
+            operationLogMapper.insertOperationLogInfo(operationLogPo);
+        } catch (Exception e) {
+            log.error("insertOperationLogInfo error.msg={}", e.getMessage(), e);
+        }
         return ResponseEntity.ok().build();
     }
 

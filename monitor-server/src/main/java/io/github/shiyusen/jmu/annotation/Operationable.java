@@ -4,6 +4,7 @@ import java.lang.annotation.*;
 
 /**
  * method接口日志切面
+ *
  * @author 石玉森
  * @create 2020-03-08 10:13
  **/
@@ -11,5 +12,5 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface Operationable {
-    String action();
+    boolean alarm() default false;
 }
