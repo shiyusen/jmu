@@ -1,4 +1,4 @@
-package io.github.shiyusen.jmu.service;
+package io.github.shiyusen.jmu.business.service;
 
 import io.github.shiyusen.jmu.business.model.OperationLogPo;
 import org.springframework.http.ResponseEntity;

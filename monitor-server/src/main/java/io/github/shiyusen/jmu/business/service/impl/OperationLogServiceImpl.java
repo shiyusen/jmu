@@ -1,8 +1,7 @@
-package io.github.shiyusen.jmu.service.impl;
+package io.github.shiyusen.jmu.business.service.impl;
 
 import io.github.shiyusen.jmu.business.mapper.OperationLogMapper;
 import io.github.shiyusen.jmu.business.model.OperationLogPo;
-import io.github.shiyusen.jmu.service.OperationLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

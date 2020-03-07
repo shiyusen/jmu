@@ -1,5 +1,0 @@
-aido:
-  datasource:
-    basePackages: com.baixin.bigdata.ddp.aido.business.mapper
-    mapperLocations: classpath*:META-INF/mapper/*.xml
-  model:
