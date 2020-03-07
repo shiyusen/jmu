@@ -26,7 +26,6 @@ public class JmuDataSourceConfig {
 
     @Bean(name = "jmuDataSource")
     @ConfigurationProperties(prefix = "jmu.datasource")
-    @Primary
     public DataSource dataSource() {
 //        return DataSourceBuilder.create().build();
         return new DruidDataSource();

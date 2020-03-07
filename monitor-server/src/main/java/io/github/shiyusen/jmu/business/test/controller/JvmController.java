@@ -18,7 +18,6 @@ import springfox.documentation.spring.web.PropertySourcedMapping;
 import springfox.documentation.spring.web.json.Json;
 import springfox.documentation.spring.web.json.JsonSerializer;
 
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author 石玉森
@@ -50,7 +49,7 @@ public class JvmController {
             propertyKey = "springfox.documentation.swagger.v2.path"
     )
     @ResponseBody
-    public ResponseEntity<Json> getDocumentation(@RequestParam(value = "group", required = false) String swaggerGroup, HttpServletRequest servletRequest) {
+    public ResponseEntity<Json> getDocumentation(@RequestParam(value = "group", required = false) String swaggerGroup) {
         String groupName = (String) Optional.fromNullable(swaggerGroup).or("default");
         return new ResponseEntity(HttpStatus.NOT_FOUND);
     }
