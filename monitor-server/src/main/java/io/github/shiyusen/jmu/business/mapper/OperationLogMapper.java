@@ -1,6 +1,6 @@
-package io.github.shiyusen.jmu.businiess.mapper;
+package io.github.shiyusen.jmu.business.mapper;
 
-import io.github.shiyusen.jmu.businiess.model.OperationLogPo;
+import io.github.shiyusen.jmu.business.model.OperationLogPo;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -1,8 +1,6 @@
 package io.github.shiyusen.jmu.config;
 
 import io.github.shiyusen.jmu.business.test.controller.JvmController;
-import io.github.shiyusen.jmu.business.test.controller.JvmController;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -24,7 +22,7 @@ import springfox.documentation.spring.web.json.JsonSerializer;
 @ComponentScan(
         basePackages = {"io.github.shiyusen.jmu"}
 )
-@ConditionalOnWebApplication
+//@ConditionalOnWebApplication
 public class JmuConfiguration {
     public JmuConfiguration() {
     }

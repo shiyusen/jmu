@@ -1,4 +1,4 @@
-package io.github.shiyusen.jmu.businiess.model;
+package io.github.shiyusen.jmu.business.model;
 
 import lombok.Data;
 

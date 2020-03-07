@@ -12,7 +12,6 @@ import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.google.common.annotations.VisibleForTesting;
 import io.github.shiyusen.jmu.models.JMonitorUI;
-import io.github.shiyusen.jmu.models.JMonitorUI;
 import springfox.documentation.spring.web.json.JacksonModuleRegistrar;
 
 import java.io.IOException;
