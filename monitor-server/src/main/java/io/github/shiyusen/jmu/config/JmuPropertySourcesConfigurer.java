@@ -12,13 +12,13 @@ import org.springframework.core.io.ClassPathResource;
  **/
 @Configuration
 public class JmuPropertySourcesConfigurer {
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer properties() {
-        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
-        YamlPropertiesFactoryBean yaml = new YamlPropertiesFactoryBean();
-        ClassPathResource[] resources = new ClassPathResource[]{new ClassPathResource("jmu.yml"),new ClassPathResource("application-jmu.yml")};
-        yaml.setResources(resources);
-        propertySourcesPlaceholderConfigurer.setProperties(yaml.getObject());
-        return propertySourcesPlaceholderConfigurer;
-    }
+//    @Bean
+//    public static PropertySourcesPlaceholderConfigurer properties() {
+//        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
+//        YamlPropertiesFactoryBean yaml = new YamlPropertiesFactoryBean();
+//        ClassPathResource[] resources = new ClassPathResource[]{new ClassPathResource("jmu.yml"),new ClassPathResource("application-jmu.yml")};
+//        yaml.setResources(resources);
+//        propertySourcesPlaceholderConfigurer.setProperties(yaml.getObject());
+//        return propertySourcesPlaceholderConfigurer;
+//    }
 }
