@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class LogUtil {
 
-    private static ConcurrentHashMap<String, Logger> loggerMap = new ConcurrentHashMap<>();
+    private static ConcurrentHashMap<String, Logger> loggerMap = new ConcurrentHashMap<String, Logger>();
 
     public static void main(String[] args) {
         StackTraceElement[] stackTraceElement = Thread.currentThread().getStackTrace();

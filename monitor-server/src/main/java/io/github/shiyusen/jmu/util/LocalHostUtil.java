@@ -51,7 +51,7 @@ public class LocalHostUtil {
      * @throws SocketException
      */
     public static String[] getLocalIPs() throws SocketException {
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         Enumeration<NetworkInterface> enumeration = NetworkInterface.getNetworkInterfaces();
         while (enumeration.hasMoreElements()) {
             NetworkInterface intf = enumeration.nextElement();

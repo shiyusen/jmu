@@ -5,6 +5,7 @@ import io.github.shiyusen.jmu.business.model.OperationLogPo;
 import io.github.shiyusen.jmu.business.service.OperationLoggerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,9 @@ import java.util.List;
 @Slf4j
 @Service
 public class OperationLoggerServiceImpl implements OperationLoggerService {
+
+    @Value("${test-p}")
+    private String test;
 
     @Autowired
     private OperationLogMapper operationLogMapper;

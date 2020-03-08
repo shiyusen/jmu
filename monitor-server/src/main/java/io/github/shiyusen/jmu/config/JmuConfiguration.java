@@ -1,6 +1,8 @@
 package io.github.shiyusen.jmu.config;
 
 import io.github.shiyusen.jmu.business.test.controller.JvmController;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 import org.springframework.web.servlet.HandlerMapping;
@@ -14,14 +16,17 @@ import springfox.documentation.spring.web.json.JsonSerializer;
  * @author 石玉森
  * @create 2020-03-06 16:23
  **/
-
+//@EnableConfigurationProperties
 @Configuration
 @Import({SpringfoxWebMvcConfiguration.class, JmuCommonConfiguration.class})
 @ComponentScan(
         basePackages = {"io.github.shiyusen.jmu"}
 )
+@PropertySource("classpath:jmu.yml")
 //@ConditionalOnWebApplication
 public class JmuConfiguration {
+
+
     public JmuConfiguration() {
     }
 

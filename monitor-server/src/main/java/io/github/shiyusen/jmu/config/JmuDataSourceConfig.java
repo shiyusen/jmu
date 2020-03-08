@@ -30,7 +30,6 @@ public class JmuDataSourceConfig {
     }
 
     @Bean(name = "jmuSqlSessionFactory")
-    @Primary
     public SqlSessionFactory sqlSessionFactory(@Qualifier("jmuDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
@@ -39,13 +38,11 @@ public class JmuDataSourceConfig {
     }
 
     @Bean(name = "jmuTransactionManager")
-    @Primary
     public DataSourceTransactionManager transactionManager(@Qualifier("jmuDataSource") DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
 
     @Bean(name = "jmuSqlSessionTemplate")
-    @Primary
     public SqlSessionTemplate sqlSessionTemplate(@Qualifier("jmuSqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
         return new SqlSessionTemplate(sqlSessionFactory);
     }
