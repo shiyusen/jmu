@@ -10,15 +10,14 @@ import java.util.Enumeration;
 import java.util.List;
 /**
  * @author 石玉森
- * @create 2020-03-07 14:41
+ * at created 2020-03-07 14:41
  **/
 
 public class LocalHostUtil {
     /**
      * 获取主机名称
      *
-     * @return
-     * @throws UnknownHostException
+     * @return 主机名称
      */
     public static String getHostName()  {
         try {
@@ -33,7 +32,6 @@ public class LocalHostUtil {
      * 获取系统首选IP
      *
      * @return
-     * @throws UnknownHostException
      */
     public static String getLocalIP()  {
         try {
@@ -48,7 +46,6 @@ public class LocalHostUtil {
      * 获取所有网卡IP，排除回文地址、虚拟地址
      *
      * @return
-     * @throws SocketException
      */
     public static String[] getLocalIPs() throws SocketException {
         List<String> list = new ArrayList<String>();
@@ -73,7 +70,7 @@ public class LocalHostUtil {
     /**
      * 判断操作系统是否是Windows
      *
-     * @return
+     * @return boolean
      */
     public static boolean isWindowsOS() {
         boolean isWindowsOS = false;

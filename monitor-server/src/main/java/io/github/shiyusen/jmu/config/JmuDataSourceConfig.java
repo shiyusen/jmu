@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 
 /**
  * @author 石玉森
- * @create 2020-03-01 13:27
+ * at created 2020-03-01 13:27
  **/
 @Configuration
 @MapperScan(basePackages = "io.github.shiyusen.jmu.business.mapper", sqlSessionTemplateRef = "jmuSqlSessionTemplate")

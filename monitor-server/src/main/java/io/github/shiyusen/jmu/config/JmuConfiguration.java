@@ -14,7 +14,7 @@ import springfox.documentation.spring.web.json.JsonSerializer;
 
 /**
  * @author 石玉森
- * @create 2020-03-06 16:23
+ * at created 2020-03-06 16:23
  **/
 //@EnableConfigurationProperties
 @Configuration
@@ -33,7 +33,7 @@ public class JmuConfiguration {
     /**
      * 借用swagger2的
      *
-     * @return
+     * @return JacksonModuleRegistrar
      */
     @Bean
     public JacksonModuleRegistrar swagger2Module() {

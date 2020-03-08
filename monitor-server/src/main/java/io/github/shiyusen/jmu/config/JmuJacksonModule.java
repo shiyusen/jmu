@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
 
 /**
  * @author 石玉森
- * @create 2020-03-06 16:40
+ * at created 2020-03-06 16:40
  **/
 public class JmuJacksonModule extends SimpleModule implements JacksonModuleRegistrar {
     public JmuJacksonModule() {

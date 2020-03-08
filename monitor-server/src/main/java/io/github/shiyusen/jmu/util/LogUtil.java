@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author 石玉森
- * @create 2018-11-16 16:57
+ * at created 2018-11-16 16:57
  **/
 
 public class LogUtil {
@@ -24,7 +24,6 @@ public class LogUtil {
     /**
      * 性能差，不建议使用
      *
-     * @return
      */
     public static Logger getInstance() {
 //        new Exception().getStackTrace()[1]

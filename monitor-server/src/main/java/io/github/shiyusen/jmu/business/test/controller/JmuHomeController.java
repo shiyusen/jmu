@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author 石玉森
- * @create 2020-02-25 12:51
+ * at created 2020-02-25 12:51
  **/
 @RequestMapping("/jmu")
 @RestController

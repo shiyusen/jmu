@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  * @author 石玉森
- * @create 2020-03-07 17:57
+ * at created 2020-03-07 17:57
  **/
 @Data
 public class BaseQueryVo {
